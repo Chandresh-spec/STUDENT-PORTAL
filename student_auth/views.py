@@ -29,14 +29,11 @@ def login_view(request):
         form=AuthenticationForm(request,data=request.POST)
 
         if form.is_valid():
-            username=form.cleaned_data.get('username')
-            password=form.cleaned_data.get('password')
 
-            user=authenticate(username=username,password=password)
-
-            if user:
-                login(request,user)
-                return redirect('home')
+            user=form.get_user()
+           
+            login(request,user)
+            return redirect('home')
             
     else:
             form=AuthenticationForm()
