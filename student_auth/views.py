@@ -13,9 +13,10 @@ def signup_view(request):
             login(request,user)
             return redirect('home')
         
+
         return render(request,'signup.html',{'form':form})
     
-
     else:
         form=SignupForm()
+    
     return render(request,'signup.html',{'form':form})
