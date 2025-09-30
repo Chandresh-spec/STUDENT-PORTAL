@@ -1,0 +1,118 @@
+ body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: #121212; /* Dark background for body */
+     color: #e0e0e0; /* Light text for readability */
+ }
+ .header {
+     background-color: #1a1a1a; /* Darker header */
+     color: #fff;
+     padding: 10px 20px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+ .header h1 {
+     margin: 0;
+     font-size: 24px;
+ }
+ .header button {
+     background-color: #333;
+     color: #fff;
+     border: none;
+     padding: 5px 10px;
+     border-radius: 4px;
+     cursor: pointer;
+ }
+ .container {
+     max-width: 900px;
+     margin: 20px auto;
+     padding: 0 20px;
+ }
+ .welcome {
+     font-size: 28px;
+     margin-bottom: 20px;
+     color: #fff;
+ }
+ .welcome span {
+     font-size: 32px;
+ }
+ .main-box {
+     border: 2px solid #000; /* Dark black border */
+     border-radius: 8px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Enhanced shadow for depth */
+     animation: fadeIn 0.5s ease-in-out;
+     transition: transform 0.3s ease;
+     overflow: hidden; /* To ensure inner borders touch seamlessly */
+     background-color: #1e1e1e; /* Dark background for main box */
+ }
+ .main-box:hover {
+     transform: scale(1.02);
+ }
+ .row {
+     display: flex;
+     border-bottom: 1px solid #333; /* Darker inner border */
+ }
+ .row:last-child {
+     border-bottom: none;
+ }
+ .card {
+     flex: 1;
+     padding: 15px;
+     background-color: #1e1e1e; /* Dark card background */
+     position: relative;
+ }
+ .card:not(:last-child) {
+     border-right: 1px solid #333; /* Darker touching borders */
+ }
+ .card h2 {
+     font-size: 18px;
+     margin: 0 0 10px;
+     color: #fff;
+ }
+ .profile-info {
+     display: flex;
+     align-items: flex-start;
+ }
+ .profile-img {
+     width: 60px;
+     height: 60px;
+     border-radius: 50%;
+     background-color: #444; /* Darker profile img placeholder */
+     margin-right: 15px;
+ }
+ .profile-details p {
+     margin: 0 0 5px;
+     font-size: 14px;
+     color: #e0e0e0;
+ }
+ table {
+     width: 100%;
+     border-collapse: collapse;
+     font-size: 14px;
+     color: #e0e0e0;
+ }
+ th, td {
+     padding: 8px;
+     text-align: left;
+     border-bottom: 1px solid #333; /* Darker table borders */
+ }
+ th {
+     font-weight: normal;
+     border-top: none;
+     color: #bbb; /* Subtle header color */
+ }
+ table tr:last-child th, table tr:last-child td {
+     border-bottom: none;
+ }
+ .status-pending {
+     color: #ff9800; /* Orange for pending */
+ }
+ .status-completed {
+     color: #4caf50; /* Green for completed */
+ }
+ @keyframes fadeIn {
+     from { opacity: 0; transform: translateY(10px); }
+     to { opacity: 1; transform: translateY(0); }
+ }
