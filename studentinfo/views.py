@@ -8,5 +8,5 @@ def helo(request):
 
 
 def dashboard_view(request):
-    info=Student.objects.filter(user=request.user)
+    info=Student.objects.get(user=request.user)
     return render(request,'dashboard.html',{'info':info})
