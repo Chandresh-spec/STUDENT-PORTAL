@@ -45,7 +45,7 @@ class Course(models.Model):
 
     student=models.OneToOneField(Student,on_delete=models.CASCADE)
     course_name=models.CharField(max_length=10,choices=course_choice)
-    current_year=models.IntegerField(max_length=10,choices=year_choice)
+    current_year=models.IntegerField(choices=year_choice)
 
     def __str__(self):
         return f"{self.course_name} - {self.student.name}"

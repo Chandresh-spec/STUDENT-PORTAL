@@ -1,11 +1,11 @@
 from django.contrib import admin
-from .models import Student,Assignment
+from .models import Student,Assignment,Course
 
 class StudentAdmin(admin.ModelAdmin):
-    list_display=('name','Rollno','current_year')
+    list_display=('name','Rollno',)
     ordering=('Rollno',)
     search_fields=('Rollno','name')
-    list_filter=('cls','Rollno')
+    list_filter=('Rollno',)
 
 
 
@@ -30,5 +30,7 @@ class StudentCourse(admin.ModelAdmin):
     ordering=('student__Rollno',)
     list_filter=('current_year','course_name')
 
+
+admin.site.register(Course,StudentCourse)
 
     
